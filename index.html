@@ -11,11 +11,11 @@
             font-family: 'Helvetica Neue', Arial, sans-serif;
             overflow: hidden;
             user-select: none;
-            color: white; /* Set default text color to white */
+            color: white; 
         }
 
         #desktop {
-            background-image: url(''); /* Initially no background image */
+            background-image: url(''); 
             background-size: cover;
             height: calc(100vh - 40px);
             overflow: hidden;
@@ -220,14 +220,14 @@
 
 <script>
     document.getElementById('desktop').addEventListener('contextmenu', function(e) {
-        e.preventDefault(); // Prevent default browser context menu
+        e.preventDefault(); 
         const contextMenu = document.getElementById('contextMenu');
         contextMenu.style.left = e.pageX + 'px';
         contextMenu.style.top = e.pageY + 'px';
         contextMenu.classList.add('show');
     });
 
-    // Close context menu if clicked outside
+
     document.addEventListener('click', function(e) {
         const contextMenu = document.getElementById('contextMenu');
         if (!contextMenu.contains(e.target)) {
@@ -329,20 +329,20 @@
         timeElement.textContent = formattedTime;
     }
 
-    // Update time every second
+  
     setInterval(updateTime, 1000);
 
-    // Initial call to set up time when the page loads
+
     updateTime();
 
-    // Set random wallpaper on page load
+
     window.onload = function () {
         const wallpapers = [
             'wallpaper1.png',
             'wallpaper2.png',
             'wallpaper3 (2).png',
             'wallpaper4.png',
-            // Add more wallpaper filenames as needed
+
         ];
         const randomIndex = Math.floor(Math.random() * wallpapers.length);
         const randomWallpaper = wallpapers[randomIndex];
